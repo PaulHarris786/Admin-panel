@@ -53,51 +53,85 @@ class Filehandling
     {
         $list=$array;
         $result_array=count($array);
-        echo "result array is ".$result_array."</br></br></br>";
+        //echo "result array is ".$result_array."</br></br></br>";
 
         $even_array_count=0;
         $odd_array_count=0;
+ $even=array();
+ $odd=array();
+ $result=array();
         for($x=0;$x<$result_array;$x++) {
 
             if ($list[$x]%2 == 0) {
                 print  $list[$x]."  is even </br>"   ;
-                $even=array();
-                $even=$list[$x];
+                //$even=array();
+               // $even=$list[$x];
+                $result[$list[$x]]='even';
                 $even_array_count++;
             }
             else {
                 print  $list[$x]."  is odd </br> "   ;
-                $odd=array();
-                $odd=$list[$x];
+                //$odd=array();
+                //$odd=$list[$x];
+                $result[$list[$x]]='odd';
+
+
                 $odd_array_count++;
             }
             //echo "total even count".$even_array_count."</br>";
         }
 
+       echo '<pre>';  print_r($result); echo '</pre>';
+ 
         echo "</br> total even count   ".$even_array_count."</br>";
         //$odd_array_count=count($odd);
         echo "total odd count   ".$odd_array_count."</br>";
         $totalcount=$even_array_count+$odd_array_count;
         echo "total array count   ".$totalcount."</br></br></br></br> ";
-        echo "even odd arrays Inserted successfully  </br>";
+       // print_r($even) ;
 
-        for($x=0;$x<$totalcount;$x++)
-        {
-            $result=array();
-            if($x<=$even_array_count) {
-                $result[$x] = $even[$x];
-            }
-              else {
-                  //$odd_array_first_index = $odd[0];
-                  $result[$even[$x]] =$odd;
-            }
-        }
-
-        Echo "Inserted successfully  </br>";
-print_r($result);
+//         for($x=0;$x<$totalcount;$x++)
+//         {
+//             //$result=array();
+//             if($x<=$even_array_count) {
+//                 $result[$x] = $even[$x];
+//                 echo "This ".$even[$x]."is even </br>";
 
 
-    }
+//             }
+//               else {
+//                   //$odd_array_first_index = $odd[0];
+//                   $result[$even[$x]] =$odd;
+//             }
+//         }
+
+//         Echo "Inserted successfully  </br>";
+// print_r($result);
+  }// <--------odd even array function end here---->
+
+public function array_fact($array)
+{   var $array;
+$result=0;
+
+      $this->array=count($array);
+      echo $this->array."</br>";
+      for ($x=0;$x<$this->array;$x++)
+      {   
+        $result=
+
+
+
+
+
+
+      }
+
+
+}
+
+
+
+
 
 
 
@@ -151,6 +185,20 @@ fclose($fp);
 
 ?>
  -->
+
+
+
+
+ <!-- $arr = array( 12,56,77,99,345,242,234,66,88,23,68,89,332,545,66,77,21,66,99,11);
+
+
+    1 = prime of each number that last digit greater than or equal to 5.
+
+    2 = index sort in ascending order ( without using function and return an indexed array included number 2 )
+$arr = array( 12,56,77,99,345,242,234,66,88,23,68,89,332,545,66,77,21,66,99,11);
+1. Total array sum ( in array sum 3 digit number should not be included )
+
+2. Make an array their index are odd and values are even ( using above array ) -->
 
 </body>
 </html>
